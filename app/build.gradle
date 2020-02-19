@@ -28,6 +28,7 @@ android {
         debug {
             buildConfigField "String", "CLIENT_ID", project.clientId
             buildConfigField "String", "CLIENT_SECRET", project.clientSecret
+            buildConfigField "String", "BASE_64", project.base64
             buildConfigField "String", "TOKEN_URL", project.tokenUrl
             buildConfigField "String", "PAGE_URL", project.pageUrl
         }
