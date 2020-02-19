@@ -11,5 +11,5 @@ import dagger.Module
 
     ]
 )
-interface UsecaseModule {
+abstract class UsecaseModule {
 }

@@ -4,8 +4,8 @@ import dagger.Binds
 import dagger.Module
 
 @Module
-interface EventsModule {
+abstract class EventsModule {
 
     @Binds
-    fun provideEventsLoader(loader: DefaultEventsLoader): EventsLoader
+    internal    abstract fun provideEventsLoader(loader: DefaultEventsLoader): EventsLoader
 }

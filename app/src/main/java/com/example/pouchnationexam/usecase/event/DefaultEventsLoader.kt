@@ -11,5 +11,10 @@ class DefaultEventsLoader
         private val api : TokenApi
     )
     : EventsLoader {
-    override fun get() : Single<Token> = api.get()
+    override fun get() : Single<Token> = api.get(CLIENT_CREDENTIALS)
+
+
+    companion object {
+        const val CLIENT_CREDENTIALS = "client_credentials"
+    }
 }
