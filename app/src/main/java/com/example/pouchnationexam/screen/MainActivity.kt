@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity(){
             .compose(scheduler.forSingle())
             .subscribe(object : SingleObserver<Events> {
                 override fun onSuccess(events: Events) {
-                    binding.plainTextView.text = events.eventTitle
+                    binding.event = events
                 }
 
                 override fun onSubscribe(d: Disposable) {
