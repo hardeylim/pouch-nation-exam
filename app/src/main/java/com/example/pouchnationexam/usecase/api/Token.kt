@@ -1,0 +1,13 @@
+package com.example.pouchnationexam.usecase.api
+
+
+import com.google.gson.annotations.SerializedName
+
+data class Token(
+    @SerializedName("access_token")
+    val accessToken: String = "", // eyJraWQiOiJ4cVQxVndGdEdpZUV5cld3a3lQWXIwa2R6T3RnTXdBQWVNQkFFVTFzUHhFPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxNjkwNzhwMmNxN2ZzYTltNGNmaXBncTU2ZCIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYmFja2VuZFwvaXRlbXMucmVhZCIsImF1dGhfdGltZSI6MTU4MjEwMTA4MSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmFwLXNvdXRoZWFzdC0xLmFtYXpvbmF3cy5jb21cL2FwLXNvdXRoZWFzdC0xX2ZRMGYwYjJsYSIsImV4cCI6MTU4MjEwNDY4MSwiaWF0IjoxNTgyMTAxMDgxLCJ2ZXJzaW9uIjoyLCJqdGkiOiI1ODQxZTgxZi1lNzhlLTQ1NDAtYTI3MS03NGJmODQzYmI2NjMiLCJjbGllbnRfaWQiOiIxNjkwNzhwMmNxN2ZzYTltNGNmaXBncTU2ZCJ9.ptUiJkQjhcofQe4KGmLhYGhcBpEHYkt-ZTukbdr-od_QG9F8VsroMOpdUKptZLyfWoEJWaB6PSBtev_9aorfskLwOLP46_5M77iz_5AH-y1A93Cn_kDYfT1ifQKYWfSJAIfqfa0Fj4Cw21Ql9CYHuR4qGDwQfublka8CVwCvyMzo-4nmeS8gbj_smqorjOtShAhP6EGydAIrurwe8BGP-DWIHP0eK8vnKapA8CNTBfFHYDLSXemscXu3-faUfpC3MaszY7hchrJ9tzjqBQmkoOsXGJxoyF-TPM93tr6F2HH_uC936c0i-nQ5hZg_XuZSU-5uAEUw8jLT9l7NR_PW4g
+    @SerializedName("expires_in")
+    val expiresIn: Int = 0, // 3600
+    @SerializedName("token_type")
+    val tokenType: String = "" // Bearer
+)

@@ -23,8 +23,6 @@ class AuthenticationApiModule {
         val loggingInterceptor = HttpLoggingInterceptor()
         loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
 
-        val authInterceptor = BasicAuthInterceptor(CLIENT_ID, CLIENT_SECRET)
-
         val builder = OkHttpClient.Builder()
         builder.addInterceptor(loggingInterceptor)
         builder.readTimeout(60, TimeUnit.SECONDS)
