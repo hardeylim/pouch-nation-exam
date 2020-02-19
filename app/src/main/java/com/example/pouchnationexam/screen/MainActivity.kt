@@ -35,9 +35,9 @@ class MainActivity : AppCompatActivity(){
         loader.get()
             .observeOn(AndroidSchedulers.mainThread())
             .compose(scheduler.forSingle())
-            .subscribe(object : SingleObserver<Token> {
-                override fun onSuccess(t: Token) {
-                    binding.plainTextView.text = t.accessToken
+            .subscribe(object : SingleObserver<Events> {
+                override fun onSuccess(events: Events) {
+                    binding.plainTextView.text = events.eventTitle
                 }
 
                 override fun onSubscribe(d: Disposable) {
