@@ -6,7 +6,7 @@ import androidx.databinding.DataBindingUtil.setContentView
 import com.example.pouchnationexam.R
 import com.example.pouchnationexam.databinding.ActivityMainBinding
 
-class WebviewActivity : AppCompatActivity(){
+class MainActivity : AppCompatActivity(){
 
     private lateinit var binding: ActivityMainBinding
 
