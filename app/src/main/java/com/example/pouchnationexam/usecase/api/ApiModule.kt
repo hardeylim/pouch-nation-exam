@@ -23,8 +23,8 @@ class ApiModule {
 
     @Provides
     @Singleton
-    internal fun provideEventsApi(@Named(EVENTS) retrofit: Retrofit): Events =
-        retrofit.create(Events::class.java)
+    internal fun provideEventsApi(@Named(EVENTS) retrofit: Retrofit): EventsApi =
+        retrofit.create(EventsApi::class.java)
 
 
 

@@ -7,7 +7,7 @@ import retrofit2.http.Headers
 
 interface EventsApi {
 
-    @GET
+    @GET("items")
     @Headers("Content-Type: application/json")
     fun get(@Header("Auth") auth: String): Single<Events>
 }
