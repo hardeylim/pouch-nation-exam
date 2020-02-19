@@ -44,6 +44,7 @@ dependencies {
     def dagger                      = "2.25.4"
     def okhttp                      = "3.10.0"
     def retrofit                    = "2.6.0"
+    def retrofit_rx_java_adapter    = "1.0.0"
     def rx_android                  = "2.1.1"
 
 
@@ -61,6 +62,7 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp"
     implementation "io.reactivex.rxjava2:rxandroid:$rx_android"
     implementation "com.google.dagger:dagger:$dagger"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$retrofit_rx_java_adapter"
     implementation("com.google.dagger:dagger-android-support:$dagger") {
         exclude group: 'com.google.code.findbugs'
         exclude group: 'com.android.support', module: 'support-annotations'
