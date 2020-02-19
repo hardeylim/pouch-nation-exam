@@ -21,10 +21,10 @@ class ApiModule {
     internal fun provideTokenApi(@Named(TOKEN) retrofit: Retrofit): TokenApi =
         retrofit.create(TokenApi::class.java)
 
-//    @Provides
-//    @Singleton
-//    internal fun provideDevApi(@Named(DEV) retrofit: Retrofit): TokenApi =
-//        retrofit.create(PageApi::class.java)
+    @Provides
+    @Singleton
+    internal fun provideEventsApi(@Named(EVENTS) retrofit: Retrofit): Events =
+        retrofit.create(Events::class.java)
 
 
 
