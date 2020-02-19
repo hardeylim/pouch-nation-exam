@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+apply plugin: "kotlin-android"
+apply plugin: 'kotlin-kapt'
+apply plugin: "kotlin-android-extensions"
 
 android {
     dataBinding {
@@ -16,6 +17,11 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     buildTypes {
@@ -35,6 +41,7 @@ android {
 
 dependencies {
 
+    def dagger                      = "2.25.4"
     def okhttp                      = "3.10.0"
     def retrofit                    = "2.6.0"
     def rx_android                  = "2.1.1"
@@ -53,5 +60,15 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofit"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp"
     implementation "io.reactivex.rxjava2:rxandroid:$rx_android"
+    implementation "com.google.dagger:dagger:$dagger"
+    implementation("com.google.dagger:dagger-android-support:$dagger") {
+        exclude group: 'com.google.code.findbugs'
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+
+    kapt "com.google.dagger:dagger-compiler:$dagger"
+    kapt "com.google.dagger:dagger-android-processor:$dagger"
 
 }
