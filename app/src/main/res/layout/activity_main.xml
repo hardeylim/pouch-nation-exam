@@ -108,8 +108,29 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="8dp"
                 android:layout_width="match_parent"
+                android:text="@{event.eventDescription}"
                 android:textSize="16sp"
                 android:textColor="@color/black"/>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/event_description_body"
+                android:id="@+id/tickets_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingTop="40dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="16dp"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="@string/tickets"/>
+            
+            <androidx.recyclerview.widget.RecyclerView
+                app:layout_constraintTop_toBottomOf="@+id/tickets_title"
+                android:id="@+id/ticket_types_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

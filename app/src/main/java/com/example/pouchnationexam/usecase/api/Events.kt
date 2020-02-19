@@ -2,6 +2,7 @@ package com.example.pouchnationexam.usecase.api
 
 
 import com.google.gson.annotations.SerializedName
+import java.math.BigDecimal
 
 data class Events(
     @SerializedName("eventId")
@@ -27,7 +28,7 @@ data class Events(
         @SerializedName("description")
         val description: String = "", // Lorem ipsum dolor sit amet, consectetur adipiscing elit
         @SerializedName("price")
-        val price: Double = 0.0 // 1200.00
+        val price: BigDecimal = BigDecimal.ZERO // 1200.00
     )
 
     data class Package(
